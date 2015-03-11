@@ -46,6 +46,7 @@ std::string DataStore::getDataString(std::vector <Entries>::iterator iter, int i
 	if (nDay < 2) {
 		dataString << '0';
 	}
+<<<<<<< HEAD
 	dataString << (*iter).day << '/';
 	
 	if (nMonth < 2) {
@@ -54,6 +55,62 @@ std::string DataStore::getDataString(std::vector <Entries>::iterator iter, int i
 	dataString << (*iter).month << '/' << (*iter).year << '\t' << (*iter).impt << '\t' << (*iter).category << '\n';
 	
 	return dataString.str();
+=======
+}
+/*
+void DataStore::executeCommand() {
+
+	switch (usercommand) {
+		case ADD:
+			//remove whitespace before user input
+			cin >> ws;
+			getline(cin, input);
+			addContent(input);
+			break;
+
+		case DELETE:
+			cin >> index;
+			deleteContent();
+			break;
+
+		case CLEAR:
+			clearContent();
+			break;
+
+		case DISPLAY:
+			displayContent();
+			break;
+			
+		case SORT:
+			sortFile();
+			break;
+
+		case SEARCH:
+			cin >> ws;
+			getline(cin, input);
+			result = searchFile(input);
+			break;
+
+		case INVALID:
+			sprintf_s(buffer, ERROR_COMMAND.c_str(), command.c_str());
+			print(buffer);
+			break;
+
+		case EXIT:
+			return;
+	}
+	commandType();
+	executeCommand();	
+}
+*/
+
+
+DataStore::DataStore(void) {
+}
+
+
+DataStore::~DataStore(void) {
+>>>>>>> a10767f6b2d7003748f1886b6c098e5337a7789d
 }
 
 void DataStore::updateFile(std::string &fileName) {

@@ -1,8 +1,9 @@
+#include "UI.h"
 #include "Logic.h"
 #include "DataStore.h"
 
 	DataStore data;
-
+	char messageToUser[200];
 Logic::Logic(void) {
 	DataStore data;
 }
@@ -29,7 +30,7 @@ void Logic::addContent(std::string &fileName, std::string readInLine) {
 bool Logic::isDuplicate(std::string &readInLine) {
 	std::vector <std::string>::iterator iter;
 
-	for (iter = file.begin(); iter != file.end(); iter++) {
+	for (iter = data.getDataBase().begin(); iter != data.getDataBase().end(); iter++) {
 		if (*iter == readInLine) {
 			sprintf_s(messageToUser, ERROR_ADD.c_str(), readInLine.c_str());
 			output(messageToUser);
@@ -219,9 +220,12 @@ bool Logic::foundContent(std::string &readInLine) {
 	return true;
 }
 
-/*
+void Logic::output(std::string messageToUser) {
+	std::cout << "\n" << messageToUser << "\n";
+}
+
 //Informs user that the file is empty
-bool TextBuddy::isFileEmpty(std::string &fileName) {
+bool Logic::isFileEmpty(std::string &fileName) {
 	if (file.empty()) {
 		sprintf_s(messageToUser, MESSAGE_EMPTY.c_str(), fileName.c_str());
 		output(messageToUser);
@@ -230,6 +234,7 @@ bool TextBuddy::isFileEmpty(std::string &fileName) {
 
 	return false;
 }
-*/
+
+
 
 Logic::~Logic(void) {}

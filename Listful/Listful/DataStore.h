@@ -37,6 +37,7 @@ private:
 public:
 	
 	DataStore();
+<<<<<<< HEAD
 	std::string getDataString(std::vector <Entries>::iterator, int = 0);
 	void updateFile(std::string &);
 	void entryType(int, std::string, int, int ,int, int, int, std::string, std::string);
@@ -50,6 +51,14 @@ public:
 	}
 	std::vector <Entries> getDataBase() {
 		return dataBase;
+=======
+	void inputCommand();
+	int checkCommand();
+	void executeCommand();
+
+	vector <Entries>  DataStore::getDataBase() {
+	return dataBase;
+>>>>>>> a10767f6b2d7003748f1886b6c098e5337a7789d
 	}
 
 };

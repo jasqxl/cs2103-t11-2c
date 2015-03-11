@@ -24,6 +24,9 @@ public:
 	void switchPlaces(int &, int &);
 	void searchFile(std::string &, std::string);
 	bool foundContent(std::string &);
+	void output(std::string messageToUser);
+	bool isFileEmpty(std::string &fileName);
+	void updateText(std::string &fileName);
 	~Logic(void);
 };
 
