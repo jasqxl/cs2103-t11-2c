@@ -17,6 +17,7 @@ public:
 	bool isDuplicate(std::string &);
 	void deleteContent(std::string &);
 	void clearFile(std::string &);
+
 	void compareLineSize(std::string &, std::string &, std::string &);
 	bool compareWord(std::string &, std::string &, std::string &);
 	void sortFile(std::string);

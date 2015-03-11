@@ -1,125 +1,80 @@
 #include "DataStore.h"
-#include <iostream>
-#include <string>
-#include <vector>
-#include <iomanip>
-#include <fstream>
-#include <algorithm>
 
-DataStore::DataStore () {
-}
+DataStore::DataStore() {}
 
-void main(int argc, char *argv[]) {
+int DataStore::countDigit(int num) {
+	int count = 0;
+	int tNum = num;
 
-	if (argc > 1) {
-
-		DataStore newStore;
-		newStore.inputCommand();
-		newStore.executeCommand();
+	while (tNum > 0) {
+		count++;
+		tNum = num/10;
 	}
 
-	return;
+	return count;
 }
 
-void DataStore::inputCommand() {
+std::string DataStore::getDataString(std::vector <Entries>::iterator iter, int index) {
+	std::ostringstream dataString;
 
-	std::cin >> command; 
-	usercommand = checkCommand();
+	if (index != 0) {
+		for (iter = dataBase.begin(); (index - 1) != 0; iter++) {
+			index--;
+		}
+	}
 
-	return;
-}
+	int sTime = countDigit((*iter).startTime);
+	int eTime = countDigit((*iter).endTime);
+	int nDay = countDigit((*iter).day);
+	int nMonth = countDigit((*iter).month);
+	int nYear = countDigit((*iter).year);
 
-int DataStore::checkCommand() {
+	dataString << (*iter).index << '. ' << (*iter).subject << "\nTime: ";
 	
-	if (command == "add") {
-		return commandType::ADD;
+	while (sTime < 4) {
+		dataString << '0';
+		sTime++;
 	}
-	else if (command == "delete") {
-		return commandType::DELETE;
+	dataString << (*iter).startTime << '-';
+
+	while (eTime < 4) {
+		dataString << '0';
+		eTime++;
 	}
-	else if (command == "display") {
-		return commandType::DISPLAY;
+	dataString << (*iter).endTime << "\tDate: ";
+	
+	if (nDay < 2) {
+		dataString << '0';
 	}
-	else if (command == "clear") {
-		return commandType::CLEAR;
+	dataString << (*iter).day << '/';
+	
+	if (nMonth < 2) {
+		dataString << '0';
 	}
-	else if (command == "search") {
-		return commandType::SEARCH;
-	}
-	else if (command == "exit") {
-		return commandType::EXIT;
-	}
-	else {
-		return commandType::INVALID;
-	}
+	dataString << (*iter).month << '/' << (*iter).year << '\t' << (*iter).impt << '\t' << (*iter).category << '\n';
+	
+	return dataString.str();
 }
 
-/*
-void DataStore::executeCommand() {
-
-	switch (usercommand) {
-		case ADD:
-			//remove whitespace before user input
-			cin >> ws;
-			getline(cin, input);
-			addContent(input);
-			break;
-
-		case DELETE:
-			cin >> index;
-			deleteContent();
-			break;
-
-		case CLEAR:
-			clearContent();
-			break;
-
-		case DISPLAY:
-			displayContent();
-			break;
-			
-		case SORT:
-			sortFile();
-			break;
-
-		case SEARCH:
-			cin >> ws;
-			getline(cin, input);
-			result = searchFile(input);
-			break;
-
-		case INVALID:
-			sprintf_s(buffer, ERROR_COMMAND.c_str(), command.c_str());
-			print(buffer);
-			break;
-
-		case EXIT:
-			return;
-	}
-	commandType();
-	executeCommand();	
-}
-
-
-
-DataStore::DataStore(void) {
-}
-
-
-DataStore::~DataStore(void) {
-}
-
-/*
-//Updates text file after every command so that if user does not close the program 
-//properly, the information is not lost
-void TextBuddy::updateText(std::string &fileName) {
-	std::vector <std::string>::iterator iter = file.begin();
+void DataStore::updateFile(std::string &fileName) {
+	std::vector <Entries>::iterator iter = dataBase.begin();
 
 	writeFile.open(fileName);
-	for (int count = 1; iter != file.end(); count++) {
-		writeFile << count << ". " << *iter << "\n";
+	for (int count = 1; iter != dataBase.end(); count++) {
+		writeFile << count << ". " << getDataString(iter) << "\n";
 		iter++;
 	}
 	writeFile.close();
 }
-*/
+
+void DataStore::entryType(int index, std::string subject, int startTime, int endTime, int day, int month, int year, std::string impt, std::string category) {
+	tempEntry.index = index;
+	tempEntry.subject = subject;
+	tempEntry.startTime = startTime;
+	tempEntry.endTime = endTime;
+	tempEntry.day = day;
+	tempEntry.month = month;
+	tempEntry.year = year;
+	tempEntry.impt = impt;
+	tempEntry.category = category;
+}

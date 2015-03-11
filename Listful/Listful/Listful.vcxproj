@@ -62,13 +62,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Add.h" />
+    <ClInclude Include="Clear.h" />
     <ClInclude Include="DataStore.h" />
-    <ClInclude Include="Logic.h" />
+    <ClInclude Include="Delete.h" />
+    <ClInclude Include="Display.h" />
+    <ClInclude Include="Edit.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Add.cpp" />
+    <ClCompile Include="Clear.cpp" />
     <ClCompile Include="DataStore.cpp" />
-    <ClCompile Include="Logic.cpp" />
+    <ClCompile Include="Delete.cpp" />
+    <ClCompile Include="Display.cpp" />
+    <ClCompile Include="Edit.cpp" />
     <ClCompile Include="Listful.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>

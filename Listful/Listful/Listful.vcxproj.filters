@@ -15,20 +15,29 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Logic.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DataStore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Add.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Delete.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Edit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Clear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Logic.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DataStore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,6 +45,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Listful.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Add.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Edit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Clear.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

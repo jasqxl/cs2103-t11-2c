@@ -6,42 +6,51 @@
 #include <string>
 #include <iomanip>
 #include <algorithm>
+#include <sstream>
 #include <fstream>
-
-using namespace std;
 
 class DataStore {
 
 private:
 	struct Entries {
 		int index;
-		string subject;
-		int time;
-		int date;
-		string impt; //importance
-		string category;
+		std::string subject;
+		int startTime;
+		int endTime;
+		int day;
+		int month;
+		int year;
+		std::string impt; //importance
+		std::string category;
 	};
 
-	vector <Entries> dataBase;
-	string command; //stores command from user
+	std::vector <Entries> dataBase;
 
-	//This enumerator contains all possible commands
-	enum commandType {
-		ADD, DELETE, DISPLAY, CLEAR, EXIT, SEARCH, INVALID
-	};
+	std::ofstream writeFile;
 
-	//This variable will contain the identified command
-	int usercommand;
+	std::ifstream readFile;
+
+	std::vector <Entries>::iterator dataIter;
+
+	Entries tempEntry;
 
 public:
+	
 	DataStore();
-	void inputCommand();
-	int checkCommand();
-	void executeCommand();
+	std::string getDataString(std::vector <Entries>::iterator, int = 0);
+	void updateFile(std::string &);
+	void entryType(int, std::string, int, int ,int, int, int, std::string, std::string);
+	int countDigit(int);
 
-	vector <Entries>  DataStore::getDataBase() {
-	return dataBase;
-}
+	std::vector <Entries>::iterator getDataIter() {
+		return dataIter;
+	}
+	Entries getEntry() {
+		return tempEntry;
+	}
+	std::vector <Entries> getDataBase() {
+		return dataBase;
+	}
 
 };
 

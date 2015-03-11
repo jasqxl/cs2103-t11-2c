@@ -36,4 +36,15 @@ class UserInterface
 		int determineCommand(int choiceNum);
 //		void checkFileCreated(std::string &fileName);
 };
+//stores command from user
+	string command; 
+
+//This enumerator contains all possible commands
+	enum commandType {
+		ADD, DELETE, DISPLAY, CLEAR, EXIT, SEARCH, INVALID
+	};
+
+	//This variable will contain the identified command
+	int usercommand;
+
 #endif

@@ -11,6 +11,7 @@
 UserInterface::~UserInterface(void){
 }
 	
+
 void UserInterface::centralizeOutput(std::string text){
 	int position = (80-text.size())/2;
 	for (int i=0; i<position; i++){
