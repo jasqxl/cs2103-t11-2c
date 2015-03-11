@@ -7,7 +7,6 @@ class Clear {
 public:
 	Clear();
 	void clearFile(std::string &, DataStore);
-	~Clear();
 };
 
 #endif

@@ -1,51 +1,43 @@
 #include "Parser.h"
-#include "UserInterface.h"
-#include "Add.h"
-#include "Clear.h"
-#include "DataStore.h"
-#include "Delete.h"
-#include "Display.h"
-#include "Edit.h"
-
-Parser::~Parser(void){
-}
-
-Parser::Parser() {
-	getline(std::cin, userInput);
-	Add add();
-	Display display();
-	Delete remove();
-	Edit edit();
-}
-
-/*std::string Parser::getUserCommand(){
-	std::string userCommand;
-	std::cin >> userCommand;
-	std::cin.ignore();
-	
-	return userCommand;
-}*/
 
 void Parser::determineCommand(DataStore data, std::string fileName, int command, int &fileSize){
 	switch (command){
-			case 1:
+			case 1:{
+				getline(std::cin, userInput);
+				std::string sub = userContent();
+				int ST = startTime();
+				int ET = endTime();
+				int DD = dateDay();
+				int MM = dateMonth();
+				int YYYY = dateYear();
+				std::string p = userPriority();
+				std::string cat =  userCat();
+
+				add.addContent(fileName, fileSize, sub, ST, ET, DD, MM, YYYY, p, cat, data);
 				fileSize++;
-				add.addContent(fileName, fileSize, userContent(), startTime(), endTime(), dateDay(), dateMonth(), dateYear(), userPriority(), userCat());
 				break;
-			case 2:
-				display.displayContent(fileName, data, getDisplay(), index);
+				   }
+			case 2:{
+//				int displayDate = 0;
+//				std::cin >> displayDate;
+				display.displayContent(fileName, data, getDisplay(), 0);
 				break;
-			case 3:
-				remove.deleteContent(fileName, data, getDelete(), index):
+				   }
+			case 3:{
+				remove.deleteContent(fileName, data, getDelete(), index);
+				fileSize--;
 				break;
-			case 4:
-				if (isDate) {
+				   }
+			case 4:{
+				getline(std::cin, userInput);
+				if (isDate()) {
 					edit.editContent(fileName, data, getEditCat(), getIndex(), userContent(), editDay(), editMonth(), editYear());
 				}
 				else {
 					edit.editContent(fileName, data, getEditCat(), getIndex(), userContent(), editSTime(), editETime());
 				}
 				break;
+				   }
 			case 5:
 				break;
 			case 6:
@@ -53,16 +45,16 @@ void Parser::determineCommand(DataStore data, std::string fileName, int command,
 			default:
 				std::cout << "Invalid command.\n";
 				std::cin >> command;
+				break;
 		}
 }
 
 std::string Parser::userContent(){
 	std::string userContent = userInput.substr(0, userInput.find_first_of(".,?!"));
-
 	return userContent;
 }
 
-bool isDate() {
+bool Parser::isDate() {
 	size_t found;
 
 	found = userInput.find("-");
@@ -124,46 +116,48 @@ int Parser::editETime(){
 	std::string userEndTime;
 	int endTime;
 
-	userEndTime = userInput.substr(userTime.find_first_of("-")+1, 4);
+	userEndTime = userInput.substr(userTime().find_first_of("-")+1, 4);
 	endTime = endTime = atoi(userEndTime.c_str());
 
 	return endTime;
 }
 
-void Parser::date(){
-	userDate = userInput.substr(userInput.find_first_of(".,?!")+2,10);
+std::string Parser::userDate(){
+	std::string userDate = userInput.substr(userInput.find_first_of(".,?!")+2,10);
+
+	return userDate;
 }
 
 int Parser::dateDay(){
-	std::string userDateDay = userDate.substr(0, 2);
+	std::string userDateDay = userDate().substr(0, 2);
 	int dateDay = atoi(userDateDay.c_str());
 	return dateDay;
 }
 
 int Parser::dateMonth(){
-	std::string userDateMonth = userDate.substr(3, 2);
+	std::string userDateMonth = userDate().substr(3, 2);
 	int dateMonth = atoi(userDateMonth.c_str());
 	return dateMonth;
 }
 
 int Parser::dateYear(){
-	std::string userDateYear = userDate.substr(6, 4);
+	std::string userDateYear = userDate().substr(6, 4);
 	int dateYear = atoi(userDateYear.c_str());
-	
 	return dateYear;
 }
 
-void Parser::time(){
-	userTime = userInput.substr(userInput.find_first_of(".,?!")+14, 9);
+std::string Parser::userTime(){
+	std::string userTime = userInput.substr(userInput.find_first_of(".,?!")+14, 9);
+
+	return userTime;
 }
 
 int Parser::startTime(){
 	std::string userStartTime;
 	int startTime;
 
-	userStartTime = userTime.substr(0, 4);
+	userStartTime = userTime().substr(0, 4);
 	startTime = atoi(userStartTime.c_str());
-	
 	return startTime;
 }
 
@@ -171,26 +165,29 @@ int Parser::endTime(){
 	std::string userEndTime;
 	int endTime;
 
-	userEndTime = userTime.substr(userTime.find_first_of("-")+1, 4);
+	userEndTime = userTime().substr(userTime().find_first_of("-")+1, 4);
 	endTime = endTime = atoi(userEndTime.c_str());
-
 	return endTime;
 }
 
-std::string Parser::userPriority(){
-	int lengthPriority = userInput.size() - userInput.find_last_of(" ");
-	std::string userPriority = userInput.substr(userInput.find_first_of(".,?!")+25, lengthPriority);
-
-	return userPriority;
-}
-
-std::string Parser::userCat(std::string userInput){
-	std::string userCat = userInput.substr(userInput.find_last_of(" "), userInput.size());
+std::string Parser::userCat(){
+	std::string userCat = userInput.substr(userInput.find_last_of(" ")+1, userInput.size());
 
 	return userCat;
 }
 
-void Parser::testParser(){
+std::string Parser::userPriority(){
+//	int lengthPriority = (userInput.size() - userInput.find_first_of(".,?!")-25) - (userInput.size()- userInput.find_last_of(","));
+	int a = userInput.size() - userInput.find_first_of(".,?!")-25;
+	int b = userInput.size()- userInput.find_last_of(",");
+	std::string userPriority = userInput.substr(userInput.find_first_of(".,?!")+25, a-b);
+
+	return userPriority;
+}
+
+
+
+/*void Parser::testParser(){
 	std::string text = getUserInput();
 	std::cout << "Day = " << dateDay(userDate(text)) << std::endl;
 	std::cout << "month = " << dateMonth(userDate(text)) << std::endl;
@@ -201,4 +198,4 @@ void Parser::testParser(){
 	std::cout << "user priority = " << userPriority(text) << std::endl;
 	std::cout << "start time = " << startTime(userTime(text)) << std::endl;
 	std::cout << "end time = " << endTime(userTime(text)) << std::endl;
-}
+}*/

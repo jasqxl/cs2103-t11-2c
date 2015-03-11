@@ -1,29 +1,25 @@
 #ifndef PARSER_H
 #define PARSER_H
 
-#include <fstream>
-#include <vector>
-#include <string>
-#include <iostream>
-#include <string>
-#include <ctime>
-#include <cstdlib>
-#include <sstream>
-#include <vector>
-#include <iomanip>
+#include "Add.h"
+#include "Clear.h"
+#include "DataStore.h"
+#include "Delete.h"
+#include "Display.h"
+#include "Edit.h"
 
 class Parser {
 	private:
 		int commandIndex;
 		int index;
 		std::string userInput;
-		std::string userDate;
-		std::string userTime;
-	
-	public:
-		~Parser(void);
+		Add add;
+		Display display;
+		Delete remove;
+		Edit edit;
 
-		Parser();
+	public:
+		Parser() {};
 
 		int getIndex() {
 			std::cin >> index;
@@ -42,18 +38,19 @@ class Parser {
 		int editYear();
 		int editSTime();
 		int editETime();
+		bool isDate();
 
 		//Subject
 		std::string userContent();
 
 		//Date
-		void date();
+		std::string userDate();
 		int dateDay();
 		int dateMonth();
 		int dateYear();
 
 		//Time
-		void time();
+		std::string userTime();
 		int startTime();
 		int endTime();
 

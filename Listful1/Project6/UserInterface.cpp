@@ -1,6 +1,18 @@
 #include "UserInterface.h"
-#include "Parser.h"
-#include "DataStore.h"
+
+const std::string UserInterface::MESSAGE_WELCOME = "*** Welcome to Listful ***";
+const std::string UserInterface::MESSAGE_ACTION = "Please choose an action: ";
+
+const std::string UserInterface::MESSAGE_ADD = "added to %s: \"%s\"";
+const std::string UserInterface::MESSAGE_DELETE = "deleted from %s: \"%s\"";
+const std::string UserInterface::MESSAGE_CLEAR = "all content deleted from %s";
+const std::string UserInterface::MESSAGE_EMPTY = "%s is empty";
+const std::string UserInterface::MESSAGE_SORT = "%s has been sorted alphabetically";
+
+const std::string UserInterface::ERROR_COMMAND = "invalid command";
+const std::string UserInterface::ERROR_DELETE = "text not found";
+const std::string UserInterface::ERROR_ADD = "\"%s\" is already inside. y to include; n to exclude";
+const std::string UserInterface::ERROR_SEARCH = "\"%s\" cannot be found in %s";
 
 void UserInterface::printStarRow(){
 	for (int i=0; i<80; i++){
@@ -50,10 +62,11 @@ void UserInterface::userAction() {
 
 void UserInterface::runProgram(char *argv[]) {
 	DataStore data;
+	Parser parse;
 
 	userAction();
 	std::cin >> command;
-	std::string fileName = argv[0];
+	std::string fileName = argv[1];
 	fileSize = 1;
 	
 	while (command != 7) {				
@@ -62,7 +75,6 @@ void UserInterface::runProgram(char *argv[]) {
 			std::cin >> command;
 		}
 
-		Parser parse;
 		parse.determineCommand(data, fileName, command, fileSize);
 
 		userAction();

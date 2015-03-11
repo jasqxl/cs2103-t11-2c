@@ -15,7 +15,6 @@ public:
 	Display();
 	int determineCategory(std::string);
 	void displayContent(std::string &, DataStore, std::string, int);
-	~Display();
 };
 
 #endif

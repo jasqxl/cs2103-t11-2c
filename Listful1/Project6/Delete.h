@@ -8,7 +8,6 @@ public:
 	Delete();
 	void deleteContent(std::string &, DataStore, std::string, int = 0);
 	int getContentIndex(DataStore, std::string);
-	~Delete();
 };
 
 #endif

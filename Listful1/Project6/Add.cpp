@@ -1,26 +1,30 @@
 #include "Add.h"
-#include "DataStore.h"
 
 Add::Add() {};
 
-void Add::addContent(std::string &fileName, int index, std::string subject, int startTime, int endTime, int day, int month, int year, std::string impt, std::string category, DataStore data) {
+void Add::addContent(std::string &fileName, int &index, std::string subject, int startTime, int endTime, int day, int month, int year, std::string impt, std::string category, DataStore data) {
 	char choice;
 	data.entryType(index, subject, startTime, endTime, day, month, year, impt, category); 
 
-	if (data.getDataBase().empty() && isDuplicate(data)) {
+	if (!data.getDataBase().empty() && isDuplicate(data)) {
 			
 		//Gives user a choice to add the text in the file despite the duplicate
+		std::cout << "Y to ignore/N to cancel" << std::endl;
 		std::cin >> choice;
-		if (choice == 'n') {
+		if (choice == 'N') {
 			std::cout << "\n";
 			return;
 		}
 	}
 
 	data.getDataBase().push_back(data.getEntry());
+//	for (int index = 0; index != data.getDataBase().size(); index++) {
+//		std::cout << data.getDataString(data.getDataIter(), index);
+//	}
+
 	data.updateFile(fileName);
 	
-	std::cout << "Entry added successfully in " << fileName;
+	std::cout << "Entry added successfully in " << fileName << std::endl;
 	//sprintf_s(messageToUser, MESSAGE_ADD.c_str(), fileName.c_str(), readInLine.c_str());
 	//output(messageToUser);
 }

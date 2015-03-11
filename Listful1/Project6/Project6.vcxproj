@@ -79,7 +79,6 @@
     <ClCompile Include="Delete.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="Edit.cpp" />
-    <ClCompile Include="Logic.cpp" />
     <ClCompile Include="Parser.cpp" />
     <ClCompile Include="MAIN.cpp" />
     <ClCompile Include="UserInterface.cpp" />

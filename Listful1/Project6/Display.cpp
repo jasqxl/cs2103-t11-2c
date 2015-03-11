@@ -1,5 +1,4 @@
 #include "Display.h"
-#include "DataStore.h"
 
 Display::Display() {}
 
@@ -25,7 +24,7 @@ void Display::displayContent(std::string &fileName, DataStore data, std::string 
 
 	switch (category) {
 		case DAY:
-			for (data.getDataIter() = data.getDataBase().begin(); data.getDataIter() != data.getDataBase().end(); data.getDataIter++) {
+			for (data.getDataIter() = data.getDataBase().begin(); data.getDataIter() != data.getDataBase().end(); data.getDataIter()++) {
 				if ((*(data.getDataIter())).day == date) {
 					std::cout << data.getDataString(data.getDataIter()) << '\n';
 				}
@@ -33,7 +32,7 @@ void Display::displayContent(std::string &fileName, DataStore data, std::string 
 			break;
 
 		case MONTH:
-			for (data.getDataIter() = data.getDataBase().begin(); data.getDataIter() != data.getDataBase().end(); data.getDataIter++) {
+			for (data.getDataIter() = data.getDataBase().begin(); data.getDataIter() != data.getDataBase().end(); data.getDataIter()++) {
 				if ((*(data.getDataIter())).month == date) {
 					std::cout << data.getDataString(data.getDataIter()) << '\n';
 				}
@@ -41,7 +40,7 @@ void Display::displayContent(std::string &fileName, DataStore data, std::string 
 			break;
 	
 		default:
-			for (data.getDataIter() = data.getDataBase().begin(); data.getDataIter() != data.getDataBase().end(); data.getDataIter++) {
+			for (data.getDataIter() = data.getDataBase().begin(); data.getDataIter() != data.getDataBase().end(); data.getDataIter()++) {
 				std::cout << data.getDataString(data.getDataIter()) << '\n';
 			}
 			//std::cout << "Display cannot be sorted according to the wanted category.\n";

@@ -1,31 +1,11 @@
-#ifndef UI_H
-#define UI_H
+#ifndef USERINTERFACE_H
+#define USERINTERFACE_H
 
-#include <fstream>
-#include <vector>
-#include <string>
-#include <iostream>
-#include <string>
+#include "Parser.h"
+
 #include <ctime>
 #include <cstdlib>
-#include <sstream>
-#include <vector>
-#include <iomanip>
 
-
-static const std::string MESSAGE_WELCOME = "*** Welcome to Listful ***";
-static const std::string MESSAGE_ACTION = "Please choose an action: ";
-
-static const std::string MESSAGE_ADD = "added to %s: \"%s\"";
-static const std::string MESSAGE_DELETE = "deleted from %s: \"%s\"";
-static const std::string MESSAGE_CLEAR = "all content deleted from %s";
-static const std::string MESSAGE_EMPTY = "%s is empty";
-static const std::string MESSAGE_SORT = "%s has been sorted alphabetically";
-
-static const std::string ERROR_COMMAND = "invalid command";
-static const std::string ERROR_DELETE = "text not found";
-static const std::string ERROR_ADD = "\"%s\" is already inside. y to include; n to exclude";
-static const std::string ERROR_SEARCH = "\"%s\" cannot be found in %s";
 
 //static const int FILE_INDEX;
 
@@ -37,9 +17,22 @@ class UserInterface {
 		int command; 
 
 		int fileSize;
-		
+
+		static const std::string MESSAGE_WELCOME;
+		static const std::string MESSAGE_ACTION;
+
+		static const std::string MESSAGE_ADD;
+		static const std::string MESSAGE_DELETE;
+		static const std::string MESSAGE_CLEAR;
+		static const std::string MESSAGE_EMPTY;
+		static const std::string MESSAGE_SORT;
+
+		static const std::string ERROR_COMMAND;
+		static const std::string ERROR_DELETE;
+		static const std::string ERROR_ADD;
+		static const std::string ERROR_SEARCH;
+
 	public:	
-		~UserInterface(void);
 		void printStarRow();
 		void centralizeOutput(std::string text);
 		void runProgram(char *[]);
