@@ -15,11 +15,11 @@ private:
 	struct Entries {
 		int index;
 		std::string subject;
-		int startTime;
-		int endTime;
 		int day;
 		int month;
 		int year;
+		int startTime;
+		int endTime;
 		std::string impt; //importance
 		std::string category;
 	};

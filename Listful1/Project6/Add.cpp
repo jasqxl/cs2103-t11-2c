@@ -4,8 +4,7 @@ void Add::addContent(std::string &fileName, int &index, std::string subject, int
 	char choice;
 	data.entryType(index, subject, startTime, endTime, day, month, year, impt, category); 
 
-	if (!data.getDataBase().empty() && isDuplicate(data)) {
-			
+	if (!data.getDataBase().empty() && isDuplicate(data)) {			
 		//Gives user a choice to add the text in the file despite the duplicate
 		std::cout << "Y to ignore/N to cancel" << std::endl;
 		std::cin >> choice;

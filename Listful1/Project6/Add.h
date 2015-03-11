@@ -4,6 +4,9 @@
 #include "DataStore.h"
 
 class Add {
+private:
+	DataStore data;
+
 public:
 	Add() {};
 	void addContent(std::string &, int &, std::string, int, int, int, int, int, std::string, std::string, DataStore);
