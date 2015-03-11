@@ -5,10 +5,16 @@
 #include <sstream>
 #include <vector>
 #include <iomanip>
-#include "UI.h"
+#include "UserInterface.h"
 
 
 UserInterface::~UserInterface(void){
+}
+
+void UserInterface::printStarRow(){
+	for (int i=0; i<80; i++){
+		std::cout << "*" ;
+	}
 }
 	
 void UserInterface::centralizeOutput(std::string text){
@@ -25,6 +31,7 @@ void UserInterface::addQuote(){
 	_quotes.push_back("Be kind, for everyone you meet is fighting a harder battle.");
 	_quotes.push_back("Never stop doing your best just because someone doesn't give you credit.");
 	_quotes.push_back("It's not who you are that holds you back, it's who you think you're not.");
+	
 	return;
 }
 
@@ -47,9 +54,25 @@ int UserInterface::userAction(){
 	std::cout << "(1) Add" << std::setw(42) << "(4) Edit" << std::endl;
 	std::cout << "(2) Display" << std::setw(40) << "(5) Search" << std::endl;
 	std::cout << "(3) Delete" << std::setw(39) << "(6) Save" << std::endl;
+	std::cout << "(7) Exit \n" << std::endl;
+	
 	int choiceNum;
 	std::cin >> choiceNum;
 	return choiceNum;
+}
+
+void UserInterface::homeScreen(){
+	printStarRow();
+	centralizeOutput(MESSAGE_WELCOME);
+	printStarRow();
+
+	addQuote();
+	centralizeOutput(quoteOfTheDay());
+	std::cout << std::endl;
+	
+	centralizeOutput(MESSAGE_ACTION);
+	std::cout << std::endl;
+	userAction();
 }
 
 /*int UserInterface::determineCommand(int choiceNum){

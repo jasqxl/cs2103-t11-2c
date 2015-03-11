@@ -5,8 +5,8 @@
 #include <string>
 
 
-static const std::string WELCOME_MESSAGE = "*** Welcome to Listful ***";
-static const std::string ACTION_MESSAGE = "Please choose an action: ";
+static const std::string MESSAGE_WELCOME = "*** Welcome to Listful ***";
+static const std::string MESSAGE_ACTION = "Please choose an action: ";
 
 static const std::string MESSAGE_ADD = "added to %s: \"%s\"";
 static const std::string MESSAGE_DELETE = "deleted from %s: \"%s\"";
@@ -28,12 +28,14 @@ class UserInterface
 		std::vector<std::string> _quotes;
 		
 	public:	
-		~UserInterface(void);	
+		~UserInterface(void);
+		void printStarRow();
 		void centralizeOutput(std::string text);
 		void addQuote();
 		std::string quoteOfTheDay();
 		int userAction();
 		int determineCommand(int choiceNum);
+		void homeScreen();
 //		void checkFileCreated(std::string &fileName);
 };
 #endif
