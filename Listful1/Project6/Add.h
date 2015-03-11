@@ -5,7 +5,7 @@
 
 class Add {
 public:
-	Add();
+	Add() {};
 	void addContent(std::string &, int &, std::string, int, int, int, int, int, std::string, std::string, DataStore);
 	bool isDuplicate(DataStore);
 	bool isSameDate(DataStore, int, int, int, int);

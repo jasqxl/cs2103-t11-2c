@@ -1,7 +1,5 @@
 #include "Add.h"
 
-Add::Add() {};
-
 void Add::addContent(std::string &fileName, int &index, std::string subject, int startTime, int endTime, int day, int month, int year, std::string impt, std::string category, DataStore data) {
 	char choice;
 	data.entryType(index, subject, startTime, endTime, day, month, year, impt, category); 

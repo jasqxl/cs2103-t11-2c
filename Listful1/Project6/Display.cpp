@@ -1,7 +1,5 @@
 #include "Display.h"
 
-Display::Display() {}
-
 int Display::determineCategory(std::string command) {
 	if (command == "day") {
 		return subDateCategory::DAY;

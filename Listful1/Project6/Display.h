@@ -12,7 +12,7 @@ private:
 	int category;
 
 public:
-	Display();
+	Display() {};
 	int determineCategory(std::string);
 	void displayContent(std::string &, DataStore, std::string, int);
 };

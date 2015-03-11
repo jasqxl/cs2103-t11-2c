@@ -1,7 +1,5 @@
 #include "Delete.h"
 
-Delete::Delete(void) {}
-
 int Delete::getContentIndex(DataStore data, std::string subject) {
 	std::size_t found;
 	

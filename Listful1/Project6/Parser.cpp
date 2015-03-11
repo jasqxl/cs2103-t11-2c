@@ -18,8 +18,6 @@ void Parser::determineCommand(DataStore data, std::string fileName, int command,
 				break;
 				   }
 			case 2:{
-//				int displayDate = 0;
-//				std::cin >> displayDate;
 				display.displayContent(fileName, data, getDisplay(), 0);
 				break;
 				   }

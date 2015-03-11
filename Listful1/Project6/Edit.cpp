@@ -1,7 +1,5 @@
 #include "Edit.h"
 
-Edit::Edit() {}
-
 int Edit::determineCategory(std::string category) {
 	if (category == "date") {
 		return subCategory::DATE;
