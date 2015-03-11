@@ -41,7 +41,7 @@ public:
 
 	vector <Entries>  DataStore::getDataBase() {
 	return dataBase;
-}
+	}
 
 };
 

@@ -53,7 +53,6 @@ int DataStore::checkCommand() {
 		return commandType::INVALID;
 	}
 }
-
 /*
 void DataStore::executeCommand() {
 
@@ -99,7 +98,7 @@ void DataStore::executeCommand() {
 	commandType();
 	executeCommand();	
 }
-
+*/
 
 
 DataStore::DataStore(void) {
