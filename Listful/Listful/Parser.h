@@ -19,6 +19,8 @@ class Parser
 		std::string userContent(std::string userInput);
 		std::string userDate(std::string userInput);
 		std::string userTime(std::string userInput);
+		int startTime(std::string userTime);
+		int endTime(std::string userTime);
 		std::string userPriority(std::string userInput);
 
 };

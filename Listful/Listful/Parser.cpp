@@ -2,6 +2,7 @@
 #include <string>
 #include <sstream>
 #include "Parser.h"
+#include <cstdlib>
 
 Parser::~Parser(void){
 }
@@ -37,6 +38,24 @@ std::string Parser::userTime(std::string userInput){
 	std::string userTime = userInput.substr(userInput.find_first_of(".,?!")+14, 9);
 
 	return userTime;
+}
+
+int Parser::startTime(std::string userTime){
+	std::string userStartTime;
+	int startTime;
+
+	userStartTime = userTime.substr(0, 4);
+	startTime = atoi(userStartTime.c_str());
+	
+	return startTime;
+}
+
+int Parser::endTime(std::string userTime){
+	std::string userEndTime;
+	int endTime;
+
+	userEndTime = userTime.substr(userTime.find_first_of("-")+1, 4);
+	endTime = endTime = atoi(userEndTime.c_str());
 }
 
 std::string Parser::userPriority(std::string userInput){
