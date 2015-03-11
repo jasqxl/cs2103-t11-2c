@@ -69,10 +69,7 @@
     <ClInclude Include="Delete.h" />
     <ClInclude Include="Display.h" />
     <ClInclude Include="Edit.h" />
-    <ClInclude Include="Logic.h" />
     <ClInclude Include="Parser.h" />
-    <ClInclude Include="Save.h" />
-    <ClInclude Include="Search.h" />
     <ClInclude Include="UserInterface.h" />
   </ItemGroup>
   <ItemGroup>
@@ -82,11 +79,9 @@
     <ClCompile Include="Delete.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="Edit.cpp" />
-    <ClCompile Include="Listful.cpp" />
     <ClCompile Include="Logic.cpp" />
     <ClCompile Include="Parser.cpp" />
-    <ClCompile Include="Save.cpp" />
-    <ClCompile Include="Search.cpp" />
+    <ClCompile Include="MAIN.cpp" />
     <ClCompile Include="UserInterface.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

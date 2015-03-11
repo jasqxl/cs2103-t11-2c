@@ -1,8 +1,16 @@
 #ifndef UI_H
 #define UI_H
+
 #include <fstream>
 #include <vector>
 #include <string>
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <sstream>
+#include <vector>
+#include <iomanip>
 
 
 static const std::string MESSAGE_WELCOME = "*** Welcome to Listful ***";
@@ -21,32 +29,24 @@ static const std::string ERROR_SEARCH = "\"%s\" cannot be found in %s";
 
 //static const int FILE_INDEX;
 
-class UserInterface
-
-{
+class UserInterface {
 	private:
 		std::vector<std::string> _quotes;
+
+		//stores command from user
+		int command; 
+
+		int fileSize;
 		
 	public:	
 		~UserInterface(void);
 		void printStarRow();
 		void centralizeOutput(std::string text);
+		void runProgram(char *[]);
 		void addQuote();
 		std::string quoteOfTheDay();
-		int userAction();
-		int determineCommand(int choiceNum);
+		void userAction();
 		void homeScreen();
 //		void checkFileCreated(std::string &fileName);
 };
-//stores command from user
-	string command; 
-
-//This enumerator contains all possible commands
-	enum commandType {
-		ADD, DELETE, DISPLAY, CLEAR, EXIT, SEARCH, INVALID
-	};
-
-	//This variable will contain the identified command
-	int usercommand;
-
 #endif

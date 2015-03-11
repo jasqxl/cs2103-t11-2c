@@ -41,7 +41,10 @@ void Display::displayContent(std::string &fileName, DataStore data, std::string 
 			break;
 	
 		default:
-			std::cout << "Display cannot be sorted according to the wanted category.\n";
+			for (data.getDataIter() = data.getDataBase().begin(); data.getDataIter() != data.getDataBase().end(); data.getDataIter++) {
+				std::cout << data.getDataString(data.getDataIter()) << '\n';
+			}
+			//std::cout << "Display cannot be sorted according to the wanted category.\n";
 			break;
 	}
 }

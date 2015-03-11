@@ -1,95 +1,173 @@
-﻿Build started 11/3/2015 8:00:00 PM.
-     1>Project "c:\Users\gerald\documents\visual studio 2012\Projects\Project6\Project6\Project6.vcxproj" on node 2 (Build target(s)).
+﻿Build started 11/3/2015 10:48:54 PM.
+     1>Project "C:\Users\gerald\Documents\GitHub\cs2103-t11-2c\Listful1\Project6\Project6.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Add.cpp Clear.cpp DataStore.cpp Delete.cpp Display.cpp Edit.cpp Logic.cpp Parser.cpp UserInterface.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Add.cpp Clear.cpp DataStore.cpp Delete.cpp Display.cpp Edit.cpp Logic.cpp MAIN.cpp Parser.cpp UserInterface.cpp
          UserInterface.cpp
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\userinterface.h(42): error C2146: syntax error : missing ';' before identifier 'command'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\userinterface.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\userinterface.cpp(41): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.h(33): error C2061: syntax error : identifier 'DataStore'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(40): error C2059: syntax error : '<<'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(5): error C3254: 'DataStore' : class contains explicit override 'printStarRow' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(5): error C2838: 'printStarRow' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(11): error C3254: 'DataStore' : class contains explicit override 'centralizeOutput' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(11): error C2838: 'centralizeOutput' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(20): error C3254: 'DataStore' : class contains explicit override 'addQuote' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(20): error C2838: 'addQuote' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(30): error C3254: 'DataStore' : class contains explicit override 'quoteOfTheDay' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(30): error C2838: 'quoteOfTheDay' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(44): error C3254: 'DataStore' : class contains explicit override 'userAction' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(44): error C2838: 'userAction' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(51): error C3254: 'DataStore' : class contains explicit override 'runProgram' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(51): error C2838: 'runProgram' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(73): error C3254: 'DataStore' : class contains explicit override 'homeScreen' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(73): error C2838: 'homeScreen' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.cpp(107): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(12)' was matched
          Parser.cpp
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\userinterface.h(42): error C2146: syntax error : missing ';' before identifier 'command'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\userinterface.h(42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.h(33): error C2061: syntax error : identifier 'DataStore'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(40): error C2059: syntax error : '<<'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(10): error C3254: 'DataStore' : class contains explicit override '{dtor}' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(10): error C2838: '{dtor}' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(13): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(13): error C2838: '{ctor}' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(13): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(29): error C3254: 'DataStore' : class contains explicit override 'determineCommand' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(29): error C2838: 'determineCommand' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(59): error C3254: 'DataStore' : class contains explicit override 'userContent' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(59): error C2838: 'userContent' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(76): error C3254: 'DataStore' : class contains explicit override 'getDelete' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(76): error C2838: 'getDelete' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(82): error C3254: 'DataStore' : class contains explicit override 'getDisplay' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(82): error C2838: 'getDisplay' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(88): error C3254: 'DataStore' : class contains explicit override 'getEditCat' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(88): error C2838: 'getEditCat' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(94): error C3254: 'DataStore' : class contains explicit override 'editDay' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(94): error C2838: 'editDay' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(100): error C3254: 'DataStore' : class contains explicit override 'editMonth' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(100): error C2838: 'editMonth' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(106): error C3254: 'DataStore' : class contains explicit override 'editYear' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(106): error C2838: 'editYear' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(113): error C3254: 'DataStore' : class contains explicit override 'editSTime' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(113): error C2838: 'editSTime' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(123): error C3254: 'DataStore' : class contains explicit override 'editETime' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(123): error C2838: 'editETime' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(133): error C3254: 'DataStore' : class contains explicit override 'date' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(133): error C2838: 'date' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(137): error C3254: 'DataStore' : class contains explicit override 'dateDay' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(137): error C2838: 'dateDay' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(143): error C3254: 'DataStore' : class contains explicit override 'dateMonth' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(143): error C2838: 'dateMonth' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(149): error C3254: 'DataStore' : class contains explicit override 'dateYear' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(149): error C2838: 'dateYear' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(156): error C3254: 'DataStore' : class contains explicit override 'time' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(156): error C2838: 'time' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(160): error C3254: 'DataStore' : class contains explicit override 'startTime' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(160): error C2838: 'startTime' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(170): error C3254: 'DataStore' : class contains explicit override 'endTime' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(170): error C2838: 'endTime' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(180): error C3254: 'DataStore' : class contains explicit override 'userPriority' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(180): error C2838: 'userPriority' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(187): error C3254: 'DataStore' : class contains explicit override 'userCat' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(187): error C2838: 'userCat' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(193): error C3254: 'DataStore' : class contains explicit override 'testParser' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(193): error C2838: 'testParser' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\parser.cpp(205): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(12)' was matched
+         MAIN.cpp
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(40): error C2059: syntax error : '<<'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(16): error C2864: 'DataStore::MESSAGE_WELCOME' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(17): error C2864: 'DataStore::MESSAGE_ACTION' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(19): error C2864: 'DataStore::MESSAGE_ADD' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(20): error C2864: 'DataStore::MESSAGE_DELETE' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(21): error C2864: 'DataStore::MESSAGE_CLEAR' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(22): error C2864: 'DataStore::MESSAGE_EMPTY' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(23): error C2864: 'DataStore::MESSAGE_SORT' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(25): error C2864: 'DataStore::ERROR_COMMAND' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(26): error C2864: 'DataStore::ERROR_DELETE' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(27): error C2864: 'DataStore::ERROR_ADD' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\userinterface.h(28): error C2864: 'DataStore::ERROR_SEARCH' : only static const integral data members can be initialized within a class
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\main.cpp(15): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(12)' was matched
          Logic.cpp
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\logic.cpp(1): fatal error C1083: Cannot open include file: 'UI.h': No such file or directory
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\logic.cpp(1): fatal error C1083: Cannot open include file: 'UI.h': No such file or directory
          Edit.cpp
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(40): error C2059: syntax error : '<<'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\edit.cpp(4): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\edit.cpp(4): error C2838: '{ctor}' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\edit.cpp(4): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
-                 c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\edit.cpp(6): error C3254: 'DataStore' : class contains explicit override 'determineCategory' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\edit.cpp(6): error C2838: 'determineCategory' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\edit.cpp(27): error C3254: 'DataStore' : class contains explicit override 'editContent' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\edit.cpp(27): error C2838: 'editContent' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\edit.cpp(68): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(12)' was matched
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(40): error C2059: syntax error : '<<'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\edit.cpp(4): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\edit.cpp(4): error C2838: '{ctor}' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\edit.cpp(4): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\edit.cpp(6): error C3254: 'DataStore' : class contains explicit override 'determineCategory' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\edit.cpp(6): error C2838: 'determineCategory' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\edit.cpp(27): error C3254: 'DataStore' : class contains explicit override 'editContent' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\edit.cpp(27): error C2838: 'editContent' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\edit.cpp(68): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(12)' was matched
          Display.cpp
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(40): error C2059: syntax error : '<<'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\display.cpp(4): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\display.cpp(4): error C2838: '{ctor}' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\display.cpp(4): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
-                 c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\display.cpp(6): error C3254: 'DataStore' : class contains explicit override 'determineCategory' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\display.cpp(6): error C2838: 'determineCategory' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\display.cpp(18): error C3254: 'DataStore' : class contains explicit override 'displayContent' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\display.cpp(18): error C2838: 'displayContent' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\display.cpp(48): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(12)' was matched
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(40): error C2059: syntax error : '<<'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\display.cpp(4): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\display.cpp(4): error C2838: '{ctor}' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\display.cpp(4): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\display.cpp(6): error C3254: 'DataStore' : class contains explicit override 'determineCategory' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\display.cpp(6): error C2838: 'determineCategory' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\display.cpp(18): error C3254: 'DataStore' : class contains explicit override 'displayContent' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\display.cpp(18): error C2838: 'displayContent' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\display.cpp(51): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(12)' was matched
          Delete.cpp
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(40): error C2059: syntax error : '<<'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\delete.cpp(4): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\delete.cpp(4): error C2838: '{ctor}' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\delete.cpp(4): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
-                 c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\delete.cpp(6): error C3254: 'DataStore' : class contains explicit override 'getContentIndex' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\delete.cpp(6): error C2838: 'getContentIndex' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\delete.cpp(17): error C3254: 'DataStore' : class contains explicit override 'deleteContent' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\delete.cpp(17): error C2838: 'deleteContent' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\delete.cpp(48): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(12)' was matched
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(40): error C2059: syntax error : '<<'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\delete.cpp(4): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\delete.cpp(4): error C2838: '{ctor}' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\delete.cpp(4): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\delete.cpp(6): error C3254: 'DataStore' : class contains explicit override 'getContentIndex' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\delete.cpp(6): error C2838: 'getContentIndex' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\delete.cpp(17): error C3254: 'DataStore' : class contains explicit override 'deleteContent' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\delete.cpp(17): error C2838: 'deleteContent' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\delete.cpp(48): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(12)' was matched
          DataStore.cpp
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(40): error C2059: syntax error : '<<'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.cpp(3): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
-                 c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.cpp(5): error C2535: 'int DataStore::countDigit(int)' : member function already defined or declared
-                 c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(44) : see declaration of 'DataStore::countDigit'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.cpp(108): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
-                 c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.cpp(116): error C2535: 'void DataStore::updateFile(std::string &)' : member function already defined or declared
-                 c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(42) : see declaration of 'DataStore::updateFile'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.cpp(127): error C2535: 'void DataStore::entryType(int,std::string,int,int,int,int,int,std::string,std::string)' : member function already defined or declared
-                 c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(43) : see declaration of 'DataStore::entryType'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.cpp(138): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(12)' was matched
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(40): error C2059: syntax error : '<<'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.cpp(3): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.cpp(5): error C2535: 'int DataStore::countDigit(int)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(44) : see declaration of 'DataStore::countDigit'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.cpp(108): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.cpp(116): error C2535: 'void DataStore::updateFile(std::string &)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(42) : see declaration of 'DataStore::updateFile'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.cpp(127): error C2535: 'void DataStore::entryType(int,std::string,int,int,int,int,int,std::string,std::string)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(43) : see declaration of 'DataStore::entryType'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.cpp(138): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(12)' was matched
          Clear.cpp
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(40): error C2059: syntax error : '<<'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\clear.cpp(4): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\clear.cpp(4): error C2838: '{ctor}' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\clear.cpp(4): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
-                 c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\clear.cpp(6): error C3254: 'DataStore' : class contains explicit override 'clearFile' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\clear.cpp(6): error C2838: 'clearFile' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\clear.cpp(19): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(12)' was matched
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(40): error C2059: syntax error : '<<'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\clear.cpp(4): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\clear.cpp(4): error C2838: '{ctor}' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\clear.cpp(4): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\clear.cpp(6): error C3254: 'DataStore' : class contains explicit override 'clearFile' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\clear.cpp(6): error C2838: 'clearFile' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\clear.cpp(19): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(12)' was matched
          Add.cpp
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(40): error C2059: syntax error : '<<'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(4): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(4): error C2838: '{ctor}' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(4): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
-                 c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(6): error C3254: 'DataStore' : class contains explicit override 'addContent' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(6): error C2838: 'addContent' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(28): error C3254: 'DataStore' : class contains explicit override 'isSameDate' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(28): error C2838: 'isSameDate' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(36): error C3254: 'DataStore' : class contains explicit override 'isSameTime' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(36): error C2838: 'isSameTime' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(47): error C3254: 'DataStore' : class contains explicit override 'isDuplicate' but does not derive from an interface that contains the function declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(47): error C2838: 'isDuplicate' : illegal qualified name in member declaration
-     1>c:\users\gerald\documents\visual studio 2012\projects\project6\project6\add.cpp(63): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\visual studio 2012\projects\project6\project6\datastore.h(12)' was matched
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(40): error C2059: syntax error : '<<'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(41): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(4): error C3254: 'DataStore' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(4): error C2838: '{ctor}' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(4): error C2535: 'DataStore::DataStore(void)' : member function already defined or declared
+                 c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(39) : see declaration of 'DataStore::DataStore'
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(6): error C3254: 'DataStore' : class contains explicit override 'addContent' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(6): error C2838: 'addContent' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(28): error C3254: 'DataStore' : class contains explicit override 'isSameDate' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(28): error C2838: 'isSameDate' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(36): error C3254: 'DataStore' : class contains explicit override 'isSameTime' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(36): error C2838: 'isSameTime' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(47): error C3254: 'DataStore' : class contains explicit override 'isDuplicate' but does not derive from an interface that contains the function declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(47): error C2838: 'isDuplicate' : illegal qualified name in member declaration
+     1>c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\add.cpp(63): fatal error C1075: end of file found before the left brace '{' at 'c:\users\gerald\documents\github\cs2103-t11-2c\listful1\project6\datastore.h(12)' was matched
          Generating Code...
-     1>Done Building Project "c:\Users\gerald\documents\visual studio 2012\Projects\Project6\Project6\Project6.vcxproj" (Build target(s)) -- FAILED.
+     1>Done Building Project "C:\Users\gerald\Documents\GitHub\cs2103-t11-2c\Listful1\Project6\Project6.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:03.56
+Time Elapsed 00:00:03.91
