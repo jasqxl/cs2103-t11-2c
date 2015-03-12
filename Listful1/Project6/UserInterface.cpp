@@ -54,6 +54,7 @@ std::string UserInterface::quoteOfTheDay() {
 }
 
 void UserInterface::userAction() {
+	std::cout << std::endl;
 	std::cout << "(1) Add" << std::setw(42) << "(4) Edit" << std::endl;
 	std::cout << "(2) Display" << std::setw(40) << "(5) Search" << std::endl;
 	std::cout << "(3) Delete" << std::setw(39) << "(6) Save" << std::endl;
@@ -63,6 +64,11 @@ void UserInterface::userAction() {
 void UserInterface::runProgram(char *argv[]) {
 	DataStore data;
 	Parser parse;
+	Add add;
+	Display display;
+	Delete remove;
+	Edit edit;
+
 
 	userAction();
 	std::cin >> command;
@@ -75,7 +81,7 @@ void UserInterface::runProgram(char *argv[]) {
 			std::cin >> command;
 		}
 
-		parse.determineCommand(data, fileName, command, fileSize);
+		parse.determineCommand(data, fileName, command, fileSize, add, remove, display, edit);
 
 		userAction();
 		std::cin >> command;

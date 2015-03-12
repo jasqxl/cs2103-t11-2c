@@ -1,6 +1,6 @@
 #include "Parser.h"
 
-void Parser::determineCommand(DataStore data, std::string fileName, int command, int &fileSize){
+void Parser::determineCommand(DataStore &data, std::string fileName, int command, int &fileSize, Add &add, Delete &remove, Display &display, Edit &edit){
 	switch (command){
 			case 1:{
 				getline(std::cin, userInput);
@@ -18,24 +18,38 @@ void Parser::determineCommand(DataStore data, std::string fileName, int command,
 				break;
 				   }
 			case 2:{
-				display.displayContent(fileName, data, getDisplay(), 0);
+				std::string displayStr = getDisplay();
+				display.displayContent(fileName, data, displayStr, 0);
 				break;
 				   }
 			case 3:{
-				remove.deleteContent(fileName, data, getDelete(), index);
+				int deleteIndex = getDelete();
+				remove.deleteContent(fileName, data, deleteIndex);
 				fileSize--;
 				break;
 				   }
 			case 4:{
+				std::cin >> index;
+				std::cin >> command;
 				getline(std::cin, userInput);
+				int ST = editSTime();
+				int ET = editETime();
+				int DD = editDay();
+				int MM = editMonth();
+				int YYYY = editYear();
+				std::string p = userPriority();
+				std::string cat = userCat();
 				if (isDate()) {
-					edit.editContent(fileName, data, getEditCat(), getIndex(), userContent(), editDay(), editMonth(), editYear());
+					edit.editContent(fileName, data, userInput, index, userInput, editDay(), editMonth(), editYear());
+				}
+				else if (isTime()) {
+					edit.editContent(fileName, data, cat, index, userInput, editSTime(), editETime());
 				}
 				else {
-					edit.editContent(fileName, data, getEditCat(), getIndex(), userContent(), editSTime(), editETime());
+					edit.editContent(fileName, data, cat, index, userInput);
 				}
 				break;
-				   }
+				}
 			case 5:
 				break;
 			case 6:
@@ -55,16 +69,27 @@ std::string Parser::userContent(){
 bool Parser::isDate() {
 	size_t found;
 
-	found = userInput.find("-");
+	found = userInput.find("/");
 	if (found != std::string::npos) {
-		return false;
+		return true;
 	}
 
-	return true;
+	return false;
 }
 
-std::string Parser::getDelete() {
-	std::string deleteStr;
+bool Parser::isTime() {
+	size_t found;
+
+	found = userInput.find("-");
+	if (found != std::string::npos) {
+		return true;
+	}
+
+	return false;
+}
+
+int Parser::getDelete() {
+	int deleteStr;
 	std::cin >> deleteStr;
 	return deleteStr;
 }

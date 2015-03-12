@@ -11,56 +11,59 @@ int DataStore::countDigit(int &num) {
 	return count;
 }
 
-std::string DataStore::getDataString(std::vector <Entries>::iterator iter, int index) {
+void DataStore::updateDataBase() {
+	dataBase.push_back(tempEntry);
+}
+
+void DataStore::deleteDataBase(std::vector <Entries>::iterator iter) {
+	dataBase.erase(iter);
+}
+
+std::string DataStore::getDataString(int index) {
 	std::ostringstream dataString;
 
-	if (index != 0) {
-		for (iter = dataBase.begin(); index != 0; iter++) {
-			index--;
-		}
-	}
+	int sTime = countDigit(dataBase[index].startTime);
+	int eTime = countDigit(dataBase[index].endTime);
+	int nDay = countDigit(dataBase[index].day);
+	int nMonth = countDigit(dataBase[index].month);
+	int nYear = countDigit(dataBase[index].year);
 
-	int sTime = countDigit((*iter).startTime);
-	int eTime = countDigit((*iter).endTime);
-	int nDay = countDigit((*iter).day);
-	int nMonth = countDigit((*iter).month);
-	int nYear = countDigit((*iter).year);
-
-	dataString << (*iter).index << ". " << (*iter).subject << "\nTime: ";
+	dataString << dataBase[index].index << ". " << dataBase[index].subject << "\nTime: ";
 	
 	while (sTime < 4) {
 		dataString << '0';
 		sTime++;
 	}
-	dataString << (*iter).startTime << '-';
+	dataString << dataBase[index].startTime << '-';
 
 	while (eTime < 4) {
 		dataString << '0';
 		eTime++;
 	}
-	dataString << (*iter).endTime << "\t\tDate: ";
+	dataString << dataBase[index].endTime << "\t\tDate: ";
 	
 	if (nDay < 2) {
 		dataString << '0';
 	}
-	dataString << (*iter).day << '/';
+	dataString << dataBase[index].day << '/';
 	
 	if (nMonth < 2) {
 		dataString << '0';
 	}
-	dataString << (*iter).month << '/' << (*iter).year << "\tPriority: " << (*iter).impt << "\tCategory: " << (*iter).category << '\n';
+	dataString << dataBase[index].month << '/' << dataBase[index].year << "\tPriority: " << dataBase[index].impt << "\tCategory: " << dataBase[index].category << '\n';
 
 	return dataString.str();
 
 }
 
+
+
 void DataStore::updateFile(std::string &fileName) {
 	std::ofstream writeFile;
 
 	writeFile.open(fileName);
-	for (std::vector <Entries>::iterator iter = dataBase.begin(); iter != dataBase.end(); iter++) {
-		std::cout << getDataString(iter) << "\n";
-		writeFile << getDataString(iter) << "\n\n";
+	for (int index = 0; index != dataBase.size(); index++) {
+		writeFile << getDataString(index) << "\n";
 	}
 	writeFile.close();
 }

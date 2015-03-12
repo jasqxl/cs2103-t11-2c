@@ -13,9 +13,9 @@ private:
 
 public:
 	Edit(){};
-	void editContent(std::string &, DataStore, std::string, int, std::string, int = 0, int = 0, int = 0);
+	void editContent(std::string &, DataStore &, std::string, int, std::string, int = 0, int = 0, int = 0);
 	int determineCategory(std::string);
-	int getContentIndex(DataStore, std::string);
+	int getContentIndex(DataStore &, std::string);
 };
 
 #endif

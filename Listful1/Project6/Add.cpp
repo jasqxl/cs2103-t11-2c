@@ -1,6 +1,6 @@
 #include "Add.h"
 
-void Add::addContent(std::string &fileName, int &index, std::string subject, int startTime, int endTime, int day, int month, int year, std::string impt, std::string category, DataStore data) {
+void Add::addContent(std::string &fileName, int &index, std::string subject, int startTime, int endTime, int day, int month, int year, std::string impt, std::string category, DataStore &data) {
 	char choice;
 	data.entryType(index, subject, startTime, endTime, day, month, year, impt, category); 
 
@@ -14,11 +14,7 @@ void Add::addContent(std::string &fileName, int &index, std::string subject, int
 		}
 	}
 
-	data.getDataBase().push_back(data.getEntry());
-//	for (int index = 0; index != data.getDataBase().size(); index++) {
-//		std::cout << data.getDataString(data.getDataIter(), index);
-//	}
-
+	data.updateDataBase();
 	data.updateFile(fileName);
 	
 	std::cout << "Entry added successfully in " << fileName << std::endl;
@@ -26,7 +22,7 @@ void Add::addContent(std::string &fileName, int &index, std::string subject, int
 	//output(messageToUser);
 }
 
-bool Add::isSameDate(DataStore data, int index, int day, int month, int year) {
+bool Add::isSameDate(DataStore &data, int index, int day, int month, int year) {
 	if (data.getDataBase()[index].year == year && data.getDataBase()[index].month == month && data.getDataBase()[index].day == day) {
 		return true;
 	}
@@ -34,7 +30,7 @@ bool Add::isSameDate(DataStore data, int index, int day, int month, int year) {
 	return false;
 }
 
-bool Add::isSameTime(DataStore data, int index, int startTime, int endTime) {
+bool Add::isSameTime(DataStore &data, int index, int startTime, int endTime) {
 	if ((data.getDataBase()[index].startTime <= startTime) && (data.getDataBase()[index].endTime >= startTime)) {
 		return true;
 	}
@@ -45,16 +41,16 @@ bool Add::isSameTime(DataStore data, int index, int startTime, int endTime) {
 	return false;
 }
 
-bool Add::isDuplicate(DataStore data) {
+bool Add::isDuplicate(DataStore &data) {
 	
 	//Once a clash is found there is no need to search for further clashes since our program informs the user of any initial clashes already
-	for (int index = 0; index != data.getDataBase().size(); index++) {
+	for (int index = 0; index != data.getDataBaseSize(); index++) {
 		if (data.getDataBase()[index].subject == data.getEntry().subject) {
-			std::cout << "Entry's subject already exists:\n" << data.getDataString(data.getDataIter()) << "\n";
+			std::cout << "Entry's subject already exists:\n" << data.getDataString(index) << "\n";
 			return true;
 		}
 		if ((isSameDate(data, index, data.getEntry().day, data.getEntry().month, data.getEntry().year)) && (isSameTime(data, index, data.getEntry().startTime, data.getEntry().endTime))) {
-			std::cout << "Entry's timing clashes with an existing one:\n" << data.getDataString(data.getDataIter()) << "\n";
+			std::cout << "Entry's timing clashes with an existing one:\n" << data.getDataString(index) << "\n";
 			return true;
 		}
 	}

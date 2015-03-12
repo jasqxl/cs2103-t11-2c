@@ -6,8 +6,8 @@
 class Delete {
 public:
 	Delete() {};
-	void deleteContent(std::string &, DataStore, std::string, int = 0);
-	int getContentIndex(DataStore, std::string);
+	void deleteContent(std::string &, DataStore &, int = 0);
+	int getContentIndex(DataStore &, std::string);
 };
 
 #endif

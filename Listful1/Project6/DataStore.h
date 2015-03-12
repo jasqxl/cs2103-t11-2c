@@ -36,13 +36,13 @@ public:
 	
 	DataStore() {};
 
-	std::string getDataString(std::vector <Entries>::iterator, int = 0);
+	std::string getDataString(int);
 	void updateFile(std::string &);
 	void entryType(int &, std::string &, int &, int &, int &, int &, int &, std::string &, std::string &);
 	int countDigit(int &);
 
 	std::vector <Entries>::iterator getDataIter() {
-		return dataIter;
+		return dataIter = dataBase.begin();
 	}
 
 	Entries getEntry() {
@@ -53,6 +53,12 @@ public:
 		return dataBase;
 	}
 
+	int getDataBaseSize() {
+		return dataBase.size();
+	}
+
+	void updateDataBase();
+	void deleteDataBase(std::vector <Entries>::iterator);
 	void inputCommand();
 	int checkCommand();
 	void executeCommand();

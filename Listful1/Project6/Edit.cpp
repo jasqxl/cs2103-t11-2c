@@ -21,9 +21,9 @@ int Edit::determineCategory(std::string category) {
 	}
 }
 	
-void Edit::editContent(std::string &fileName, DataStore data, std::string command, int index, std::string newEntry, int newNum1, int newNum2, int newNum3) {
+void Edit::editContent(std::string &fileName, DataStore &data, std::string command, int index, std::string newEntry, int newNum1, int newNum2, int newNum3) {
 	
-	if (data.getDataBase().size() == 0) {
+	if (data.getDataBaseSize() == 0) {
 		std::cout << "File is currently empty.\n";
 		return;
 	}
@@ -60,5 +60,5 @@ void Edit::editContent(std::string &fileName, DataStore data, std::string comman
 	}
 
 	data.updateFile(fileName);
-	std::cout << "Entry " << index << " is successfully edited:\n" << data.getDataString(data.getDataIter(), index);
+	std::cout << "Entry " << index << " is successfully edited:\n" << data.getDataString(index-1);
 }

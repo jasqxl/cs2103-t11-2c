@@ -6,7 +6,7 @@
 class Clear {
 public:
 	Clear() {};
-	void clearFile(std::string &, DataStore);
+	void clearFile(std::string &, DataStore &);
 };
 
 #endif

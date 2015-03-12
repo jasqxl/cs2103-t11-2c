@@ -8,18 +8,13 @@
 #include "Display.h"
 #include "Edit.h"
 
-
-
 class Parser {
 	private:
 		int commandIndex;
 		int index;
 		std::string userInput;
-		Add add;
-		Display display;
-		Delete remove;
-		Edit edit;
-
+		std::string command;
+		
 	public:
 		Parser() {};
 
@@ -28,9 +23,9 @@ class Parser {
 			return index;
 		};
 
-		void determineCommand(DataStore, std::string, int, int &);
+		void determineCommand(DataStore &, std::string, int, int &, Add &, Delete &, Display &, Edit &);
 
-		std::string getDelete();
+		int getDelete();
 
 		std::string getDisplay();
 
@@ -41,6 +36,7 @@ class Parser {
 		int editSTime();
 		int editETime();
 		bool isDate();
+		bool isTime();
 
 		//Subject
 		std::string userContent();

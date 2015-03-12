@@ -14,7 +14,7 @@ private:
 public:
 	Display() {};
 	int determineCategory(std::string);
-	void displayContent(std::string &, DataStore, std::string, int);
+	void displayContent(std::string &, DataStore &, std::string, int);
 };
 
 #endif

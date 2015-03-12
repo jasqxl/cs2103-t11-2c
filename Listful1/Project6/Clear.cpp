@@ -1,7 +1,7 @@
 #include "Clear.h"
 
-void Clear::clearFile(std::string &fileName, DataStore data) {
-	if (data.getDataBase().size() == 0) {
+void Clear::clearFile(std::string &fileName, DataStore &data) {
+	if (data.getDataBaseSize() == 0) {
 		std::cout << "File is currently empty.\n";
 		return;
 	}

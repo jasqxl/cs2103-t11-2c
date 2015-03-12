@@ -12,8 +12,8 @@ int Display::determineCategory(std::string command) {
 	}
 }
 	
-void Display::displayContent(std::string &fileName, DataStore data, std::string command, int date) {
-	if (data.getDataBase().size() == 0) {
+void Display::displayContent(std::string &fileName, DataStore &data, std::string command, int date) {
+	if (data.getDataBaseSize() == 0) {
 		std::cout << "File is currently empty.\n";
 		return;
 	}
@@ -22,24 +22,24 @@ void Display::displayContent(std::string &fileName, DataStore data, std::string 
 
 	switch (category) {
 		case DAY:
-			for (data.getDataIter() = data.getDataBase().begin(); data.getDataIter() != data.getDataBase().end(); data.getDataIter()++) {
+			for (int index = 0; index != data.getDataBaseSize(); index++) {
 				if ((*(data.getDataIter())).day == date) {
-					std::cout << data.getDataString(data.getDataIter()) << '\n';
+					std::cout << data.getDataString(index) << '\n';
 				}
 			}
 			break;
 
 		case MONTH:
-			for (data.getDataIter() = data.getDataBase().begin(); data.getDataIter() != data.getDataBase().end(); data.getDataIter()++) {
+			for (int index = 0; index != data.getDataBaseSize(); index++) {
 				if ((*(data.getDataIter())).month == date) {
-					std::cout << data.getDataString(data.getDataIter()) << '\n';
+					std::cout << data.getDataString(index) << '\n';
 				}
 			}
 			break;
 	
 		default:
-			for (data.getDataIter() = data.getDataBase().begin(); data.getDataIter() != data.getDataBase().end(); data.getDataIter()++) {
-				std::cout << data.getDataString(data.getDataIter()) << '\n';
+			for (int index = 0; index != data.getDataBaseSize(); index++) {
+				std::cout << data.getDataString(index) << '\n';
 			}
 			//std::cout << "Display cannot be sorted according to the wanted category.\n";
 			break;
