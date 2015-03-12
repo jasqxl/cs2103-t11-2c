@@ -1,4 +1,4 @@
-﻿Build started 12/3/2015 10:35:20 AM.
+﻿Build started 12/3/2015 10:59:22 AM.
      1>Project "C:\Users\yyyueying\Documents\Visual Studio 2012\Projects\CS Proj\Listful1\Project6\Project6.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Add.cpp Clear.cpp DataStore.cpp Delete.cpp Display.cpp Edit.cpp Parser.cpp MAIN.cpp UserInterface.cpp
@@ -29,4 +29,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:22.67
+Time Elapsed 00:00:12.57

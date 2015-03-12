@@ -23,7 +23,7 @@ class Parser {
 			return index;
 		};
 
-		void determineCommand(DataStore &, std::string, int, int &, Add &, Delete &, Display &, Edit &);
+		void determineCommand(DataStore &, std::string, int, int &, Add &, Delete &, Display &, Edit &, Clear &);
 
 		int getDelete();
 

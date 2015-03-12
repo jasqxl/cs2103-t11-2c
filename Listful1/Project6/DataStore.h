@@ -57,6 +57,10 @@ public:
 		return dataBase.size();
 	}
 
+	void clearDataBase() {
+		dataBase.clear();
+	}
+
 	void updateDataBase();
 	void deleteDataBase(std::vector <Entries>::iterator);
 	void inputCommand();

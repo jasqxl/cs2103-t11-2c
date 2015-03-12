@@ -1,6 +1,6 @@
 #include "Parser.h"
 
-void Parser::determineCommand(DataStore &data, std::string fileName, int command, int &fileSize, Add &add, Delete &remove, Display &display, Edit &edit){
+void Parser::determineCommand(DataStore &data, std::string fileName, int command, int &fileSize, Add &add, Delete &remove, Display &display, Edit &edit, Clear &deleteFile){
 	switch (command){
 			case 1:{
 				getline(std::cin, userInput);
@@ -52,8 +52,10 @@ void Parser::determineCommand(DataStore &data, std::string fileName, int command
 				}
 			case 5:
 				break;
-			case 6:
+			case 6: {
+					deleteFile.clearFile(fileName, data);
 				break;
+				}
 			default:
 				std::cout << "Invalid command.\n";
 				std::cin >> command;

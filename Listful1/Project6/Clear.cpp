@@ -6,7 +6,7 @@ void Clear::clearFile(std::string &fileName, DataStore &data) {
 		return;
 	}
 
-	data.getDataBase().clear();
+	data.clearDataBase();
 	data.updateFile(fileName);
 
 	std::cout << "File has been cleared successfully.\n";

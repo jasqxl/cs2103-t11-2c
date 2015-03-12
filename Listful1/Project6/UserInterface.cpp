@@ -57,7 +57,7 @@ void UserInterface::userAction() {
 	std::cout << std::endl;
 	std::cout << "(1) Add" << std::setw(42) << "(4) Edit" << std::endl;
 	std::cout << "(2) Display" << std::setw(40) << "(5) Search" << std::endl;
-	std::cout << "(3) Delete" << std::setw(39) << "(6) Save" << std::endl;
+	std::cout << "(3) Delete" << std::setw(39) << "(6) Clear" << std::endl;
 	std::cout << "(7) Exit \n" << std::endl;
 }
 
@@ -68,6 +68,7 @@ void UserInterface::runProgram(char *argv[]) {
 	Display display;
 	Delete remove;
 	Edit edit;
+	Clear clearFile;
 
 
 	userAction();
@@ -81,7 +82,7 @@ void UserInterface::runProgram(char *argv[]) {
 			std::cin >> command;
 		}
 
-		parse.determineCommand(data, fileName, command, fileSize, add, remove, display, edit);
+		parse.determineCommand(data, fileName, command, fileSize, add, remove, display, edit, clearFile);
 
 		userAction();
 		std::cin >> command;
