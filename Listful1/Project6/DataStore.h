@@ -49,6 +49,7 @@ public:
 		return tempEntry;
 	}
 
+	
 	std::vector <Entries> getDataBase() {
 		return dataBase;
 	}
@@ -59,6 +60,10 @@ public:
 
 	void clearDataBase() {
 		dataBase.clear();
+	}
+
+	std::string getSubject(int index){
+		return dataBase[index].subject;
 	}
 
 	void updateDataBase();
